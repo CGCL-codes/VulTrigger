@@ -1,6 +1,6 @@
 ## VulTrigger: Identify vulnerability-triggering statements of a given vulnerability ##
 
-### 一、目录结构及文件说明 ###
+### 1. Directory structure and instructions###
 **(1) ./data folder：**
 This folder contains all the CVE data required by the paper, including patch files, vulnerability files and non-vulnerability files for each CVE.
 
@@ -41,7 +41,13 @@ Next, the function of each file will be introduced.
 **(4) ./result folder:**
 This folder stores the results of extracting Critical Variables.
 
-### 二、执行步骤 ###
+### 2. Requirement ###
+1. python 2.x
+2. python 3.x
+3. joern 0.3.1(jdk 1.7)
+4. neo4j 2.1.5
+
+### 3. Step Instructions ###
 You can run it step-by-step for a better understanding of the tool, or use the script all_data.py to more efficiently get results from multiple CVEs.
 
 **(1) step-by-step**
