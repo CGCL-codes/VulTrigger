@@ -1,6 +1,6 @@
 ## VulTrigger: Identify vulnerability-triggering statements of a given vulnerability ##
 
-### 1. Directory structure and instructions###
+### 1. Directory structure and instructions ###
 **(1) ./data folder：**
 This folder contains all the CVE data required by the paper, including patch files, vulnerability files and non-vulnerability files for each CVE.
 
