@@ -1,8 +1,8 @@
-## VulTrigger: Identify vulnerability-triggering statements of a given vulnerability ##
+## VulTrigger: Identifying Vulnerability-Triggering Statements of a Given Vulnerability ##
 
 ### 1. Directory structure and instructions ###
 **(1) ./data folder：**
-This folder contains all the CVE data required by the paper, including patch files, vulnerability files and non-vulnerability files for each CVE.
+This folder contains 704 CVEs data required by the paper, including patch files, vulnerability files and non-vulnerability files for each CVE.
 
 **(2) ./doc folder：**
 The file `CFVD.xlsx` is the Cross-Function Vulnerability Dataset (CFVD) for C/C++ open-source software we built. The dataset involves 704 CVE vulnerabilities, each of which is labeled with its patch statements, its vulnerability-triggering statements, being cross-function or not, the type of cross-function vulnerability, and the se- quence of functions starting from the vulnerable function to the vulnerability-triggering function, etc.
@@ -13,7 +13,7 @@ The implementation of VulTrigger is mainly divided into five steps. Among them, 
 1. Identifying Critical Variables. This step needs file `cv_extract.py`
 2. Generating Program Slices. This step need files `get_depen.py`, `get_cfg_relation.py`, `complete_PDG.py`, `access_db_operate.py`, `extract_df2.py`, `general_op2.py`, `slice_op2.py`
 4. Generating Characteristics
-5. Identifying Vulnerability-Triggering Statements. This step requires all the code in the 。`./match_sink` folder.
+5. Identifying Vulnerability-Triggering Statements. This step requires all the code in the `./match_sink` folder.
 6. Manually Checking and Updating Characteristics
 
 Next, the function of each file will be introduced.
