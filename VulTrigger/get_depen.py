@@ -108,14 +108,14 @@ if __name__ == '__main__':
         print('Missing parameters! Please add software name.')
     
     #Delete the last generated key variable file and intermediate output file
-    os.chdir('../result')
+    os.chdir('./cv_result')
     os.system('rm *')
-    print('delete * in ../result')
+    print('delete * in ./cv_result')
     os.chdir(path_data["start_folder"])
 
     start_dic = get_vulname(args[0])
     #start = ['ebml_parse_elem']
-    os.chdir(path_data["start_folder"]) #Return to the source2slice directory
+    os.chdir(path_data["start_folder"]) #Return to the src directory
     os.system('python3 cv_extract.py')
     print('get cv_extract.py')
     print(start_dic)

@@ -1,0 +1,14 @@
+./data/C-Diffs/ffmpeg/CVE-2013-0852/CVE-2013-0852_CWE-119_c0d68be555f5858703383040e04fcd6529777061_pgssubdec.c_1.1.diff
+=======================complex type===========================
+1. Patch_model: Add
+Change_statement_type: if-Condition
+Line_number: new file:#225
+Critical_variable: ['buf_size']
+
+2. Patch_model: Add
+Change_statement_type: Fun-Call
+Line_number: new file:#226
+Critical_variable: ['avctx']
+
+==============================================================
+

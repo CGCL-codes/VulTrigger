@@ -1,0 +1,31 @@
+{
+    "graph_db":{
+        "cfg_db":"./cfg_db",
+        "pdg_db":"./pdg_db",
+        "dict_call2cfgNodeId_funcID":"./dict_call2cfgNodeID_funcID",
+        "testCode":"/home/VulTrigger/testCode"
+    },
+    "joern":{
+        "joern_exe":"/home/SySeVR/joern-0.3.1/",
+        "testCode":"/home/SySeVR/joern-0.3.1/testCode",
+        "before_joern":"/home/SySeVR/joern-0.3.1/.joernIndex/"
+    },
+    "start_folder":"/home/VulTrigger/",
+    "neo4j":"/home/SySeVR/neo4j/bin",
+    "step1_output":{
+        "step1_output_tmp_txt":"./cv_result/step1_result.txt",
+        "step1_output_tmp_pkl":"./cv_result/step1_result.pkl"
+    },
+    "step2_output":{
+        "record_tmp_slice":"./slices_logs/step2_result_tmp.txt",
+        "startnode_debug_path":"./slices_logs/startnode_debug_path.txt",
+        "sliceres_anatmp":"./slices_logs/sliceres_anatmp.txt",
+        "sliceres_anall":"./slices_logs/sliceres_anall.txt"
+    },
+    "all_test_code":{
+        "all_diff_path":"./data/C-Diffs/ffmpeg/",
+        "all_new_path":"./data/C-Non_Vulnerable_Files/ffmpeg/",
+        "all_old_path":"./data/C-Vulnerable_Files/ffmpeg/",
+        "all_dep_path":"./data/Dependency_Files/"
+    }
+}

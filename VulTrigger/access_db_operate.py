@@ -1,7 +1,7 @@
 ## -*- coding: utf-8 -*-
 from joern.all import JoernSteps
 from igraph import *
-from general_op import *
+from general_op2 import *
 import pickle
 from py2neo.packages.httpstream import http
 http.socket_timeout = 9999

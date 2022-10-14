@@ -862,7 +862,6 @@ if __name__ == "__main__":
     file_dict = {}
 
     step1_out_filepath = path_data['step1_output']['step1_output_tmp_txt']
-    err_filepath = path_data['error_rec']['step2_err_filepath']
     diff_path = path_data['all_test_code']['all_diff_path'].replace("all_test_code","code")
     new_path = path_data['all_test_code']['all_new_path'].replace("all_test_code","code")
     old_path = path_data['all_test_code']['all_old_path'].replace("all_test_code","code")

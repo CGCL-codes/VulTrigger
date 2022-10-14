@@ -909,7 +909,8 @@ def get_call_var(s, flag):
         if(i[0] == '\"' and i[-1] == '\"'):
             continue
         if(i[0] == '\'' and i[-1] == '\''):
-        if flag == 2:
+            continue
+        if(flag == 2):
             res_vars.append(i.split(' ')[-1])
         else:#  
             sym_L  = i.rfind('<')

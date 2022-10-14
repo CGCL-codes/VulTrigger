@@ -1,6 +1,6 @@
 ## coding:utf-8
 from general_op2 import isFuncCall
-# from Queue import Queue,LifoQueue,PriorityQueue
+from Queue import Queue,LifoQueue,PriorityQueue
 from general_op2 import *
 import re
 

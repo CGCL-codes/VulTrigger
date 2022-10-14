@@ -1,7 +1,7 @@
 ## coding:utf-8
 from access_db_operate import *
 import copy
-from general_op import *
+from general_op2 import *
 from py2neo.packages.httpstream import http
 http.socket_timeout = 9999
 
