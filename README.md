@@ -1,4 +1,4 @@
-## VulTrigger: Identifying Vulnerability-Triggering Statements of a Given Vulnerability ##
+# VulTrigger: Identifying Vulnerability-Triggering Statements of a Given Vulnerability #
 
 ### 1. Directory structure and instructions ###
 **(1) ./data folder：**
