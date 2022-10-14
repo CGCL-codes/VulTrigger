@@ -11,16 +11,16 @@ We use the vulnerabilities described in the PatchDB dataset, which is the larges
 
 Finally, we filtered 4,076 vulnerabilities to 704 vulnerabilities, involving 16 CWEs and 49 software products.
 
-##  Requirement ##
+##  Requirements ##
 1. python 2.x
 2. python 3.x
-3. joern 0.3.1(jdk 1.7)
+3. joern 0.3.1 (jdk 1.7)
 4. neo4j 2.1.5
 
 ## Step Instructions ##
 You can run it step-by-step for a better understanding of the tool, or use the script all_data.py to more efficiently get results from multiple CVEs.
 
-**(1) step-by-step**
+**(1) Step-by-step**
 1. Enter the software repository and switch it to the corresponding version.
 	Take CVE-2013-0852 as an example:
 	CVE-2013-0852's hash is c0d68be555f5858703383040e04fcd6529777061, execute in the ./gitrepos/ffmpeg_git:
@@ -41,7 +41,7 @@ You can run it step-by-step for a better understanding of the tool, or use the s
 15. Execute the file `extract_df2.py`
 16. Execute the file `match_sink.py [cwe] [path of vulnerability file] [path of slice file] [path of diff file]` `
 
-**(2) automated method**
+**(2) Automated method**
 1. Put all the CVEs to be detected in the ***./pre_data/test*** directory. It should be noted that they must be CVEs of the same software.
 2. Modify `config.json`.
 3. Execute the file `all_data_test.py [software]`. 

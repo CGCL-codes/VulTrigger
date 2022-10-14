@@ -4,7 +4,7 @@ The implementation of VulTrigger is mainly divided into five steps. Among them, 
 2. Generating Program Slices. This step need files `get_depen.py`, `get_cfg_relation.py`, `complete_PDG.py`, `access_db_operate.py`, `extract_df2.py`, `general_op2.py`, `slice_op2.py`
 4. Generating Characteristics
 5. Identifying Vulnerability-Triggering Statements. This step requires all the code in the `./match_sink` folder.
-6. Manually Checking and Updating Characteristics
+6. Manually Checking and Updating Characteristics.
 
 Next, the function of each file will be introduced.
 -  `cv_extract.py`: Preprocess the diff file and identifying Critical Variables. The results is stored in ***../result***
@@ -27,7 +27,7 @@ Next, the function of each file will be introduced.
 - `./gitrepos`: Store the required software repository source code, The naming format is `[software_git]` such as `ffmpeg_git`. If you want to analyze the CVE of a certain software, please make sure that the repository source code of the software exists in this directory.
 - `./pre_data`: Store the data to be tested.
 - `./data`: Store the diff file, vulnerability file and non-vulnerability file for this test. The ***./data/Dependency_Files*** folder stores the dependency files of each CVE according to the software classification.
-- `./cv_result`: This folder stores the results of extracting Critical Variables.
+- `./cv_result`: This folder stores the results of extracting critical variables.
 - `./slice_logs`: This folder stores the log files during the slicing process. If you encounter errors during the slicing process, you can read the files in this folder for specific information.
 - `./testCode`: Store the .c files needed in process of ***Generating Program Slices***.
 
