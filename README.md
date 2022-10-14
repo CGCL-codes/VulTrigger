@@ -1,7 +1,7 @@
 # VulTrigger: Identifying Vulnerability-Triggering Statements of a Given Vulnerability #
 
 ## Directory structure and instructions ##
-**(1) ./data folder：**
+**(1) ./dataset folder：**
 This folder contains diff files, vulnerable files, and non-vulnerability files for 704 CVEs.
 
 **(2) ./doc folder：**
