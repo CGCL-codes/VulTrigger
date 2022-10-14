@@ -1,15 +1,7 @@
 # Towards Understanding and Identifying Cross-Function Vulnerabilities #
-We present the first study on characterizing cross-function vulnerabilities and propose VulTrigger for identifying vulnerability-triggering statements. Experimental results show that when compared with the existing method to identify cross-function vulnerabilities, VulTrigger can achieve a 21.7% lower false-positive rate, a 35.9% lower false-negative rate, and a 48.0% higher overall effectiveness in F1-measure. We also find: 
+We present the first study on characterizing cross-function vulnerabilities and propose VulTrigger for identifying vulnerability-triggering statements. For this purpose, we build the first Cross-Function Vulnerability Dataset (CFVD) for C/C++ open-source software. We find: 
 1. the vulnerability type often determines the type of vulnerability-triggering statements, meaning that vulnerability type can be leveraged to identify vulnerability-triggering statements;
-2. cross-function vulnerabilities are prevalent with 2.8 layers on average.
-
-We use the vulnerabilities described in the PatchDB dataset, which is the largest security patches in C/C++ collected from the National Vulnerability Database (NVD). And then, we focus on the 16 CWEs and filter the vulnerabilities satisfying any of the following conditions: 
-1. the software repositories do not involve the vul- nerable version or patch version corresponding to the diff file;
-2. the patched statements are not in functions;
-3. the vul- nerability type does not belong to the 16 CWEs;
-4. manual analysis is difficult to accurately determine the vulnerability- triggering statements.
-
-Finally, we filtered 4,076 vulnerabilities to 704 vulnerabilities, involving 16 CWEs and 49 software products.
+2. cross-function vulnerabilities are prevalent with 2.8 ross-function layers on average.
 
 ##  Requirements ##
 1. python 2.x
