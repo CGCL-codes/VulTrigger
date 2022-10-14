@@ -2,7 +2,7 @@
 
 ## Directory structure and instructions ##
 **(1) ./data folder：**
-This folder contains 704 CVEs data required by the paper, including patch files, vulnerability files and non-vulnerability files for each CVE.
+This folder contains diff files, vulnerable files, and non-vulnerability files for 704 CVEs.
 
 **(2) ./doc folder：**
 The file `CFVD.xlsx` is the Cross-Function Vulnerability Dataset (CFVD) for C/C++ open-source software we built. The dataset involves 704 CVE vulnerabilities, each of which is labeled with its patch statements, its vulnerability-triggering statements, being cross-function or not, the type of cross-function vulnerability, and the se- quence of functions starting from the vulnerable function to the vulnerability-triggering function, etc.
@@ -11,10 +11,10 @@ The file `CFVD.xlsx` is the Cross-Function Vulnerability Dataset (CFVD) for C/C+
 This folder contains all the code and data needed for the VulTrigger implementation. The purpose of each file is explained below.
 The implementation of VulTrigger is mainly divided into five steps. Among them, steps 1, 2, and 4 need to be automated.
 1. Identifying Critical Variables. This step needs file `cv_extract.py`
-2. Generating Program Slices. This step need files `get_depen.py`, `get_cfg_relation.py`, `complete_PDG.py`, `access_db_operate.py`, `extract_df2.py`, `general_op2.py`, `slice_op2.py`
-4. Generating Characteristics
+2. Generating Program Slices. This step need files `get_depen.py`, `get_cfg_relation.py`, `complete_PDG.py`, `access_db_operate.py`, `extract_df2.py`, `general_op2.py`, `slice_op2.py`.
+4. Generating Characteristics.
 5. Identifying Vulnerability-Triggering Statements. This step requires all the code in the `./match_sink` folder.
-6. Manually Checking and Updating Characteristics
+6. Manually Checking and Updating Characteristics.
 
 Next, the function of each file will be introduced.
 -  `cv_extract.py`: Preprocess the diff file and identifying Critical Variables. The results is stored in ***../result***
@@ -39,18 +39,18 @@ Next, the function of each file will be introduced.
 - `./data`: Store the diff file, vulnerability file and non-vulnerability file for this test. The ***./data/Dependency_Files*** folder stores the dependency files of each CVE according to the software classification.
 
 **(4) ./result folder:**
-This folder stores the results of extracting Critical Variables.
+This folder stores the results of extracting critical variables.
 
 ## Requirements ##
 1. python 2.x
 2. python 3.x
-3. joern 0.3.1(jdk 1.7)
+3. joern 0.3.1 (jdk 1.7)
 4. neo4j 2.1.5
 
 ## Step Instructions ##
 You can run it step-by-step for a better understanding of the tool, or use the script all_data.py to more efficiently get results from multiple CVEs.
 
-**(1) step-by-step**
+**(1) Step-by-step**
 1. Enter the software repository and switch it to the corresponding version.
 	Take CVE-2013-0852 as an example:
 	CVE-2013-0852's hash is c0d68be555f5858703383040e04fcd6529777061, execute in the ./gitrepos/ffmpeg_git:
@@ -71,7 +71,7 @@ You can run it step-by-step for a better understanding of the tool, or use the s
 15. Execute the file `extract_df2.py`
 16. Execute the file `match_sink.py [cwe] [path of vulnerability file] [path of slice file] [path of diff file]` `
 
-**(2) automated method**
+**(2) Automated method**
 1. Put all the CVEs to be detected in the ***./pre_data/test*** directory. It should be noted that they must be CVEs of the same software.
 2. Modify `config.json`.
 3. Execute the file `cv_extract.py`. 
