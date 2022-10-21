@@ -17,23 +17,23 @@ You can run it step-by-step for a better understanding of the tool, or use the s
 	CVE-2013-0852's hash is c0d68be555f5858703383040e04fcd6529777061, execute in the ./gitrepos/ffmpeg_git:
 	`git checkout c0d68be555f5858703383040e04fcd6529777061`
 2. Stop neo4j service and delete the .***joernIndex*** in the joern installation directory.
-3. Execute the file `./gitrepos/collect.py` .
+3. Execute the file `./gitrepos/collect.py`.
 4. Restart neo4j server.
-5. Execute the file `get_depen.py [software]`
+5. Execute the file `get_depen.py [software]`.
 6. Copy dependent files to `[joern installation directory]/testCode`.
 7. Execute the command `./joern testCode` in joern installation directory.
 8. Modify `config.json`.
 9. Put the relevant files of the CVE to be tested in the ./data/C-Diffs, ./data/C-Non_Vulnerable_Files, ./data/C-Vulnerable_Files folders.
 10. Execute the file `cv_extract.py`. 
 11. Put the generated dependency files in the ***./testCode*** folder.
-12. Execute the file `get_cfg_relation.py`
-13. Execute the file `complete_PDG.py`
-14. Execute the file `access_db_operate.py`
-15. Execute the file `extract_df2.py`
-16. Execute the file `match_sink.py [cwe] [path of vulnerability file] [path of slice file] [path of diff file]` 
+12. Execute the file `get_cfg_relation.py`.
+13. Execute the file `complete_PDG.py`.
+14. Execute the file `access_db_operate.py`.
+15. Execute the file `extract_df2.py`.
+16. Execute the file `match_sink.py [cwe] [path of vulnerability file] [path of slice file] [path of diff file]`. 
 
 **(2) Automated method**
 1. Put all the CVEs to be detected in the ***./pre_data/test*** directory. It should be noted that they must be CVEs of the same software.
 2. Modify `config.json`.
 3. Execute the file `all_data_test.py [software]`. 
-4. Execute the file `match_sink.py [cwe] [path of vulnerability file] [path of slice file] [path of diff file]` 
+4. Execute the file `match_sink.py [cwe] [path of vulnerability file] [path of slice file] [path of diff file]`. 
