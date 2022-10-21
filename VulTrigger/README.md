@@ -13,10 +13,10 @@ Next, the functions in each file will be introduced.
 -  `complete_PDG.py`: Use ***joern*** to parse all dependent files, get the PDG graph, and store it in ***./pdg_db/testCode***.
 - `access_db_operate.py`: Use ***joern*** to parse all dependent files, get the call graph, and store it in ***./dict_call2cfgNodeID_funcID/testCode***.
 - `extract_df2.py`: Start slicing from the modified lines in the diff file. It should be noted that we use function call graphs and PDG graphs to obtain data flow information across functions. The results are stored in ***./results***.
-- `general_op2.py`: Some general functions when generating *cfg graph*、*pdg graph* or *call graph*.
+- `general_op2.py`: Some general functions when generating *cfg graph*, *pdg graph* or *call graph*.
 - `slice_op2.py`: Some general functions when generating program slices.
 - `config.json`: The configuration file. Please modify it according to your own directory before executing.
-- `./match_sink/match_sink.py`: Identify vulnerability-triggering statements according to different CWE types. The inputs are the CWE and the path of vulnerability file. An example is as follows:
+- `./match_sink/match_sink.py`: Identify vulnerability-triggering statements according to the CWE. The inputs are the CWE and the path of vulnerability file. An example is as follows:
 	`python3 match_sink.py [cwe] [path to vulnerability file] [path of slice file] 
 	example:
 	`python3 match_sink.py 119 ../../dataset/ffmpeg/CVE-2011-3929/CVE-2011-3929_CWE-119_5a396bb3a66a61a68b80f2369d0249729bf85e04_dv.c_1.1_OLD.c/ ./results/ffmpeg/CVE-2011-3929/slices.txt
