@@ -7,16 +7,16 @@ The implementation of VulTrigger is mainly divided into five steps. Among them, 
 6. Manually Checking and Updating Characteristics.
 
 Next, the functions of each file will be introduced.
--  `cv_extract.py`: Preprocess the diff file and identifying critical variables. The results are stored in ***../result***.
+-  `cv_extract.py`: Preprocess the diff file and identify critical variables. The results are stored in ***../result***.
 -  `get_depen.py`: Use ***joern*** to parse the vulnerability function, obtain possible dependency files, and store the results in ***./data/Dependency_Files***.
--  `get_cfg_relation.py`: Use ***joern*** to parse all dependent files, get the CFG graph and store it in ***./cfg_db/testCode***.
--  `complete_PDG.py`: Use ***joern*** to parse all dependent files, get the PDG graph and store it in ***./pdg_db/testCode***.
-- `access_db_operate.py`: Use ***joern*** to parse all dependent files, get the Call graph and store it in ***./dict_call2cfgNodeID_funcID/testCode***.
-- `extract_df2.py`: Start slicing from the modified lines in diff file. It should be noted that we use the function call Graphs and PDG graphs to obtain data flow information across functions. The results is stored in ***./results***.
+-  `get_cfg_relation.py`: Use ***joern*** to parse all dependent files, get the CFG graph, and store it in ***./cfg_db/testCode***.
+-  `complete_PDG.py`: Use ***joern*** to parse all dependent files, get the PDG graph, and store it in ***./pdg_db/testCode***.
+- `access_db_operate.py`: Use ***joern*** to parse all dependent files, get the call graph, and store it in ***./dict_call2cfgNodeID_funcID/testCode***.
+- `extract_df2.py`: Start slicing from the modified lines in diff file. It should be noted that we use the function call graphs and PDG graphs to obtain data flow information across functions. The results are stored in ***./results***.
 - `general_op2.py`: Some general functions when generating *cfg graph*、*pdg graph* or *call graph*.
 - `slice_op2.py`: Some general functions when generating program slices.
 - `config.json`: The configuration file. Please modify it according to your own directory before executing.
-- `./match_sink/match_sink.py`: According to different CWE types to identify Vulnerability-Triggering Statements. The inputs are CWE and the path of vulnerability file. Example is as follow:
+- `./match_sink/match_sink.py`: Identify vulnerability-triggering statements according to different CWE types. The inputs are the CWE and the path of vulnerability file. An example is as follows:
 	`python3 match_sink.py [cwe] [path to vulnerability file] [path of slice file] 
 	example:
 	`python3 match_sink.py 119 ../../dataset/ffmpeg/CVE-2011-3929/CVE-2011-3929_CWE-119_5a396bb3a66a61a68b80f2369d0249729bf85e04_dv.c_1.1_OLD.c/ ./results/ffmpeg/CVE-2011-3929/slices.txt
