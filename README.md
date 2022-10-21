@@ -30,7 +30,7 @@ You can run it step-by-step for a better understanding of the tool, or use the s
 13. Execute the file `complete_PDG.py`
 14. Execute the file `access_db_operate.py`
 15. Execute the file `extract_df2.py`
-16. Execute the file `match_sink.py [cwe] [path of vulnerability file] [path of slice file] [path of diff file]` `
+16. Execute the file `match_sink.py [cwe] [path of vulnerability file] [path of slice file] [path of diff file]` 
 
 **(2) Automated method**
 1. Put all the CVEs to be detected in the ***./pre_data/test*** directory. It should be noted that they must be CVEs of the same software.
