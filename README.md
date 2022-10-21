@@ -9,7 +9,7 @@ We present the first study on characterizing cross-function vulnerabilities and 
 3. neo4j 2.1.5
 
 ## Step Instructions ##
-You can run it step-by-step for a better understanding of the tool, or use the script all_data.py to more efficiently get results from multiple CVEs.
+You can run it step-by-step for a better understanding of the VulTrigger tool, or use the script all_data.py to more efficiently get results from multiple CVEs.
 
 **(1) Step-by-step**
 1. Enter the software repository and switch it to the corresponding version.
