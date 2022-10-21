@@ -4,10 +4,9 @@ We present the first study on characterizing cross-function vulnerabilities and 
 2. cross-function vulnerabilities are prevalent with 2.8 cross-function layers on average.
 
 ##  Requirements ##
-1. python 2.x
-2. python 3.x
-3. joern 0.3.1 (jdk 1.7)
-4. neo4j 2.1.5
+1. python 2.x, 3.x
+2. joern 0.3.1 (jdk 1.7)
+3. neo4j 2.1.5
 
 ## Step Instructions ##
 You can run it step-by-step for a better understanding of the tool, or use the script all_data.py to more efficiently get results from multiple CVEs.
