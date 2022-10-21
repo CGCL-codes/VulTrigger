@@ -141,7 +141,7 @@ def is_pointer(line, cv, point_var):  # ,
     sp_var = sp_res[0].strip()
     if (sp_var != ''):
         sp_var = sp_var[-1]
-    if (sp_var in sp_operators):  # ，*
+    if (sp_var in sp_operators):
         return True
     else:
         return False
@@ -194,14 +194,14 @@ def is_array(line, cv):
 
 #  sink point is an integer overflow type match due to integer arithmetic
 def is_calculation(line, cv):
-    if '(' in line and ')' in line:  # if，while，
+    if '(' in line and ')' in line:
         tmps = line[line.find('('):line.find(')') - 1]
         if ',' in tmps:
             tmps = tmps.split(',')
             for tmp in tmps:
                 if (cv + ' *') in tmp or (cv + ' +') in tmp or ('* ' + cv) in tmp or ('+ ' + cv) in tmp:
                     return True
-    if (cv + ' *') in line and '=' in line:  # ？
+    if (cv + ' *') in line and '=' in line:
         return True
     if ('* ' + cv) in line and '=' in line:
         if '*' == line[0]:

@@ -12,17 +12,27 @@ from sink_CWE617 import sink_617
 from sink_CWE772 import sink_772
 from sink_CWE835 import sink_835
 from sink_CWE476 import sink_476
-from slice_op2 import get_call_var
+import os
 
 parser = OptionParser()
 (options, args) = parser.parse_args()
-if(len(args) != 1):
-    print('Missing parameters! Please add cwe and path of vulnerability file.')
-cwe = args[0] # Matching vulnerability types
-old_file = args[1]
-slice_file = args[2]
-diff_file = args[3]  # CWE-772、401、415、835
+if(len(args) != 2):
+    print('Missing parameters! Please add cwe and path of slice file.')
+command_cve = args[0]
+command_soft = args[1]
+old_path = '../data/C-Vulnerable_Files/' + command_soft + '/' + command_cve
+for i in os.listdir(old_path):
+    old_file = i
+    break
+cwe = old_file.split('_')[1].replace('CWE-', '') # Matching vulnerability types
 
+slice_file = '../results/' + command_soft + '/' + command_cve + '/slices.txt'
+old_file = old_path + '/' + old_file
+if(cwe == '772' or cwe == '401' or cwe == '415' or cwe == '835'):
+    diff_file = old_file.replace('C-Vulnerable_Files', 'C-Diffs').replace('_OLD.c', '.diff')
+else:
+    diff_file = ''
+    
 list_key_words = ['if', 'while', 'for']  #
 val_type = ['short', 'u64', 'int', 'long', 'char', 'float', 'double', 'struct', 'union', 'enum', 'const', 'unsigned', 'signed',
             'uint32_t', 'struct', 'guint', 'size_t', 'uint64_t', 'PSH_Point']
@@ -322,7 +332,7 @@ def find_sink(after_diff, cv_list, sink_results, sink_cv, epoch, vul_name, point
                             if change_cv != '...':
                                 # cv_list[epoch].append(change_cv)
                                 cv_list[epoch] = append_cv(cv_list[epoch], change_cv)
-                                print("The current CV spans the function, and the new CV after transformation is：", change_cv)
+                                print("The current CV spans the function, and the new CV after transformation is: ", change_cv)
             # If it is a function call line, you need to determine whether it is a call to a vulnerable function,
             # and if it is and the key variable is used as the return value, you need to add the returned value to the key variable list
             func_name = get_funcname(line)
@@ -336,7 +346,7 @@ def find_sink(after_diff, cv_list, sink_results, sink_cv, epoch, vul_name, point
                         # cv_list[epoch].append(return_cv)
                         cv_list[epoch] = append_cv(cv_list[epoch], return_cv)
                         return_flag = False
-                        print('The current CV is returned after the vulnerability function, and the new CV after the transformation is：', return_cv)
+                        print('The current CV is returned after the vulnerability function, and the new CV after the transformation is: ', return_cv)
             if 'for ' in line:
                 if '->' in line and ' -> ' not in line:
                     line = line.replace('->', ' -> ')
@@ -401,8 +411,8 @@ def find_sink(after_diff, cv_list, sink_results, sink_cv, epoch, vul_name, point
                     tmp_cv = tmp_cv+'$$'+str(i)
                     # cv_list[epoch + 1].append(tmp_cv)
                     cv_list[epoch + 1] = append_cv(cv_list[epoch + 1], tmp_cv)
-                    print('CV：', line)
-                    print('changed CV：', tmp_cv)
+                    print('CV: ', line)
+                    print('changed CV: ', tmp_cv)
     # All current CVs are not matched to the sink point, add its previous level to the next CV to be matched cvList[epoch+1]
     if len(sink_results) == 0:
         for cv in cv_list[epoch]:
@@ -416,11 +426,11 @@ def find_sink(after_diff, cv_list, sink_results, sink_cv, epoch, vul_name, point
                 cv = sp_cv[0]
             new_cv = left_process(cv, 'up')
             if new_cv not in cv_list[epoch + 1] and new_cv not in cv_list[epoch]:
-                print('The upper level of CV is：', new_cv)
+                print('The upper level of CV is: ', new_cv)
                 # cv_list[epoch + 1].append(new_cv)
                 cv_list[epoch + 1] = append_cv(cv_list[epoch + 1], new_cv)
     print(epoch)
-    print("If no sink point is found in the current cv list, the next cv to look for is：", cv_list[epoch + 1])
+    print("If no sink point is found in the current cv list, the next cv to look for is: ", cv_list[epoch + 1])
 
 
 def find_first_use(after_diff, cv_list, sink_results, sink_cv, epoch):

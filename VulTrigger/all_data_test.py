@@ -1,6 +1,4 @@
 ## coding:utf-8
-from calendar import c
-from hashlib import new
 import os
 import shutil
 import json

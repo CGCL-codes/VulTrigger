@@ -16,12 +16,13 @@ Next, the functions in each file will be introduced.
 - `general_op2.py`: Some general functions when generating *cfg graph*, *pdg graph* or *call graph*.
 - `slice_op2.py`: Some general functions when generating program slices.
 - `config.json`: The configuration file. Please modify it according to your own directory before executing.
-- `./match_sink/match_sink.py`: Identify vulnerability-triggering statements according to the CWE. The inputs are the CWE and the path of vulnerability file. An example is as follows:
-	`python3 match_sink.py [cwe] [path to vulnerability file] [path of slice file] 
-	example:
-	`python3 match_sink.py 119 ../../dataset/ffmpeg/CVE-2011-3929/CVE-2011-3929_CWE-119_5a396bb3a66a61a68b80f2369d0249729bf85e04_dv.c_1.1_OLD.c/ ./results/ffmpeg/CVE-2011-3929/slices.txt
-	If you want to identify vulnerability-triggering statements of CWE-772, CWE-401, CWE-415 or CWE-835, you should execute the following command:
-	`python3 match_sink.py [cwe] [path of vulnerability file] [path of slice file] [path of diff file]`
+- `./match_sink/match_sink.py`: Identify vulnerability-triggering statements according to the CWE. You should execute the following command:
+
+	`python3 match_sink.py [cve id] [software]`
+
+	Take CVE-2011-2929 as an example, the command is as follows:
+
+	`python3 match_sink.py CVE-2011-2929 ffmpeg`
 - `all_data.xlsx`: This file shows the patch function information for each CVE.
 - `pre_data/process_name.py`: Normalize the format of all the data to be tested in the ***./pre_data/test*** folder.
 - `./gitrepos`: This foler stores the required software repository source code. The naming format is `[software_git]`, e.g., `ffmpeg_git`. If you want to analyze the CVE of a certain software, please make sure that the repository source code of the software exists in this directory.

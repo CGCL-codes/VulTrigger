@@ -20,7 +20,7 @@ def is_assert(line, cv):
 
 def sink_617(line, cv, sink_results, assert_sink, sink_cv):
     if is_assert(line, cv) and assert_sink:
-        print('sink is assert ：', line)
+        print('sink is assert: ', line)
         sink_results.append(line)
         sink_cv.append(cv)
         assert_sink = False

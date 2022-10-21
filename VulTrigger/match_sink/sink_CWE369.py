@@ -41,13 +41,13 @@ def is_divisin_func(line, cv):
 
 def sink_369(line, cv, sink_results, division_sink, division_func_sink, sink_cv):
     if is_divisin(line, cv) and division_sink:
-        print('sink：', line)
+        print('sink: ', line)
         sink_results.append(line)
         sink_cv.append(cv)
         division_sink = False
 
     if is_divisin_func(line, cv):
-        print('sink：', line)
+        print('sink: ', line)
         sink_results.append(line)
         sink_cv.append(cv)
         division_func_sink = False

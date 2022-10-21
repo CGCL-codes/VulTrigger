@@ -34,26 +34,24 @@ def is_risk_func_189(line ,cv):
 
 def sink_189(line, cv, sink_results, array_sink, sink_cv, pointer_sink, risk_func_sink, calculation_sink, point_var, division_sink ):
     if is_array(line, cv) and array_sink:
-        print('sink：', line)
+        print('sink: ', line)
         sink_results.append(line)
         sink_cv.append(cv)
         array_sink = False
     if is_pointer(line, cv, point_var) and pointer_sink:
-        print('sink：', line)
+        print('sink: ', line)
         sink_results.append(line)
         sink_cv.append(cv)
         pointer_sink = False
     if is_risk_func_189(line, cv) and risk_func_sink:
-        print('sink：', line)
+        print('sink: ', line)
         sink_results.append(line)
         sink_cv.append(cv)
         risk_func_sink = False
     if is_calculation(line, cv) and calculation_sink:
-        print('：', line)  # 
         sink_results.append(line)
         calculation_sink = False
     if is_divisin(line, cv) and division_sink:
-        print('：', line)  # 
         sink_results.append(line)
         division_sink = False
     return array_sink, pointer_sink, risk_func_sink, calculation_sink, division_sink

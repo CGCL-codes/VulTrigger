@@ -5,10 +5,7 @@ Priority match free position
 If it does not match, the modified position is considered to be incorrectly used, and the position where the CV was first used is matched.
 """
 
-
-# ？
 from share_func import has_only_cv
-
 
 def is_free(line, cv):
 
@@ -53,13 +50,13 @@ def is_free_old(line, cv):
 def sink_415(line, cv, sink_results, free_sink, sink_cv, sign):
     if sign == 'slices':
         if is_free(line, cv) and free_sink < 3:
-            print('sink free：', line)
+            print('sink free: ', line)
             sink_results.append(line)
             sink_cv.append(cv)
             free_sink += 1
     else:
         if is_free_old(line, cv) and free_sink < 3:
-            print('sink free：', line)
+            print('sink free: ', line)
             line = line.strip('\t')
             line = line.strip('\n')
             line = line + ' location: ' + sign
@@ -72,7 +69,7 @@ def sink_415(line, cv, sink_results, free_sink, sink_cv, sign):
 #  UAF type For a cv find the location of one call to free
 def sink_416(line, cv, sink_results, free_sink, sink_cv):
     if is_free(line, cv) and free_sink < 3:
-        print('sink free：', line)
+        print('sink free: ', line)
         sink_results.append(line)
         sink_cv.append(cv)
         free_sink += 1
