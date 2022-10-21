@@ -25,9 +25,9 @@ Next, the functions in each file will be introduced.
 - `all_data.xlsx`: Patch function information for each CVE data.
 - `pre_data/process_name.py`: Normalize the format of all the data to be tested in the ***./pre_data/test*** folder.
 - `./gitrepos`: Store the required software repository source code, The naming format is `[software_git]` such as `ffmpeg_git`. If you want to analyze the CVE of a certain software, please make sure that the repository source code of the software exists in this directory.
-- `./pre_data`: Store the data to be tested.
-- `./data`: Store the diff file, vulnerability file and non-vulnerability file for this test. The ***./data/Dependency_Files*** folder stores the dependency files of each CVE according to the software classification.
+- `./pre_data`: This folder stores the data to be tested.
+- `./data`: This folder stores the diff file, vulnerability file and non-vulnerability file for this test. The ***./data/Dependency_Files*** folder stores the dependency files of each CVE according to the software classification.
 - `./cv_result`: This folder stores the results of extracting critical variables.
 - `./slice_logs`: This folder stores the log files during the slicing process. If you encounter errors during the slicing process, you can read the files in this folder for specific information.
-- `./testCode`: Store the .c files needed in process of ***Generating Program Slices***.
+- `./testCode`: This folder stores the .c files needed in the process of ***Generating Program Slices***.
 
