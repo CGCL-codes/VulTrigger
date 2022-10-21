@@ -20,7 +20,7 @@ Next, the functions in each file will be introduced.
 	`python3 match_sink.py [cwe] [path to vulnerability file] [path of slice file] 
 	example:
 	`python3 match_sink.py 119 ../../dataset/ffmpeg/CVE-2011-3929/CVE-2011-3929_CWE-119_5a396bb3a66a61a68b80f2369d0249729bf85e04_dv.c_1.1_OLD.c/ ./results/ffmpeg/CVE-2011-3929/slices.txt
-	If you want to identify Vulnerability-Triggering Statements of CWE-772, CWE-401, CWE-415 or CWE-835, you should execute the following command:
+	If you want to identify vulnerability-triggering statements of CWE-772, CWE-401, CWE-415 or CWE-835, you should execute the following command:
 	`python3 match_sink.py [cwe] [path of vulnerability file] [path of slice file] [path of diff file]`
 - `all_data.xlsx`: This file shows the patch function information for each CVE.
 - `pre_data/process_name.py`: Normalize the format of all the data to be tested in the ***./pre_data/test*** folder.
