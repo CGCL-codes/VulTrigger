@@ -22,9 +22,9 @@ Next, the functions in each file will be introduced.
 	`python3 match_sink.py 119 ../../dataset/ffmpeg/CVE-2011-3929/CVE-2011-3929_CWE-119_5a396bb3a66a61a68b80f2369d0249729bf85e04_dv.c_1.1_OLD.c/ ./results/ffmpeg/CVE-2011-3929/slices.txt
 	If you want to identify Vulnerability-Triggering Statements of CWE-772, CWE-401, CWE-415 or CWE-835, you should execute the following command:
 	`python3 match_sink.py [cwe] [path of vulnerability file] [path of slice file] [path of diff file]`
-- `all_data.xlsx`: Patch function information for each CVE data.
+- `all_data.xlsx`: This file shows the patch function information for each CVE.
 - `pre_data/process_name.py`: Normalize the format of all the data to be tested in the ***./pre_data/test*** folder.
-- `./gitrepos`: Store the required software repository source code, The naming format is `[software_git]` such as `ffmpeg_git`. If you want to analyze the CVE of a certain software, please make sure that the repository source code of the software exists in this directory.
+- `./gitrepos`: This foler stores the required software repository source code. The naming format is `[software_git]`, e.g., `ffmpeg_git`. If you want to analyze the CVE of a certain software, please make sure that the repository source code of the software exists in this directory.
 - `./pre_data`: This folder stores the data to be tested.
 - `./data`: This folder stores the diff file, vulnerability file and non-vulnerability file for this test. The ***./data/Dependency_Files*** folder stores the dependency files of each CVE according to the software classification.
 - `./cv_result`: This folder stores the results of extracting critical variables.
