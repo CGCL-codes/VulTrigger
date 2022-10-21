@@ -7,7 +7,7 @@ The implementation of VulTrigger is mainly divided into five steps. Among them, 
 6. Manually Checking and Updating Characteristics.
 
 Next, the functions of each file will be introduced.
--  `cv_extract.py`: Preprocess the diff file and identifying Critical Variables. The results is stored in ***../result***.
+-  `cv_extract.py`: Preprocess the diff file and identifying critical variables. The results are stored in ***../result***.
 -  `get_depen.py`: Use ***joern*** to parse the vulnerability function, obtain possible dependency files, and store the results in ***./data/Dependency_Files***.
 -  `get_cfg_relation.py`: Use ***joern*** to parse all dependent files, get the CFG graph and store it in ***./cfg_db/testCode***.
 -  `complete_PDG.py`: Use ***joern*** to parse all dependent files, get the PDG graph and store it in ***./pdg_db/testCode***.
