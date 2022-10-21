@@ -6,13 +6,13 @@ The implementation of VulTrigger is mainly divided into five steps. Among them, 
 5. Identifying Vulnerability-Triggering Statements. This step requires all the code in the `./match_sink` folder.
 6. Manually Checking and Updating Characteristics.
 
-Next, the functions of each file will be introduced.
+Next, the functions in each file will be introduced.
 -  `cv_extract.py`: Preprocess the diff file and identify critical variables. The results are stored in ***../result***.
 -  `get_depen.py`: Use ***joern*** to parse the vulnerability function, obtain possible dependency files, and store the results in ***./data/Dependency_Files***.
 -  `get_cfg_relation.py`: Use ***joern*** to parse all dependent files, get the CFG graph, and store it in ***./cfg_db/testCode***.
 -  `complete_PDG.py`: Use ***joern*** to parse all dependent files, get the PDG graph, and store it in ***./pdg_db/testCode***.
 - `access_db_operate.py`: Use ***joern*** to parse all dependent files, get the call graph, and store it in ***./dict_call2cfgNodeID_funcID/testCode***.
-- `extract_df2.py`: Start slicing from the modified lines in diff file. It should be noted that we use the function call graphs and PDG graphs to obtain data flow information across functions. The results are stored in ***./results***.
+- `extract_df2.py`: Start slicing from the modified lines in the diff file. It should be noted that we use function call graphs and PDG graphs to obtain data flow information across functions. The results are stored in ***./results***.
 - `general_op2.py`: Some general functions when generating *cfg graph*、*pdg graph* or *call graph*.
 - `slice_op2.py`: Some general functions when generating program slices.
 - `config.json`: The configuration file. Please modify it according to your own directory before executing.
