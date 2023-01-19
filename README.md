@@ -1,5 +1,6 @@
-# Towards Understanding and Identifying Cross-Function Vulnerabilities #
-We present the first study on characterizing cross-function vulnerabilities and propose VulTrigger for identifying vulnerability-triggering statements. For this purpose, we build the first Cross-Function Vulnerability Dataset (CFVD) for C/C++ open-source software. We find: 
+# VulTrigger: A New Tool for Studying Inter-Procedural Vulnerabilities #
+
+We present the first study on characterizing inter-procedural vulnerabilities and propose VulTrigger for identifying sink statements. For this purpose, we build the first  Inter-Prodedural Vulnerability Dataset (InterPVD) for C/C++ open-source software. We find: 
 1. the vulnerability type often determines the type of vulnerability-triggering statements, meaning that vulnerability type can be leveraged to identify vulnerability-triggering statements;
 2. cross-function vulnerabilities are prevalent with 2.8 cross-function layers on average.
 
