@@ -1,4 +1,2 @@
-## Inter-Prodedural Vulnerability Dataset (InterPVD) ##
-
-1.  `CFVD.xlsx` is the list of vulnerabilities of C/C++ open-source software we built. It involves 704 CVE vulnerabilities, each of which is labeled with its patch statements, its vulnerability-triggering statements, being cross-function or not, the type of cross-function vulnerability, and the sequence of functions starting from the vulnerable function to the vulnerability-triggering function, etc.
+1.  ` InterPVD.xlsx` is the list of vulnerabilities of C/C++ open-source software we built. It involves 704 CVE vulnerabilities, each of which is labeled with its patch statements, its vulnerability-triggering statements, being cross-function or not, the type of cross-function vulnerability, and the sequence of functions starting from the vulnerable function to the vulnerability-triggering function, etc.
 2.  `./DIFF_NEW_OLD`: This folder contains diff files, vulnerable files, and non-vulnerability files for 704 CVEs.
