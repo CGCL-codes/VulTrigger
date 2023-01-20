@@ -1,4 +1,4 @@
-# VulTrigger: A New Tool for Studying Inter-Procedural Vulnerabilities #
+# VulTrigger: A Tool for Studying Inter-Procedural Vulnerabilities #
 
 We propose a tool, dubbed VulTrigger, for identifying sink statements across functions and use this tool to conduct a systematic empirical study on inter-procedural vulnerabilities in C/C++ open-source software.  For this purpose, we build the first Inter-Prodedural Vulnerability Dataset (InterPVD) for C/C++ open-source software. We find: 
 1. the vulnerability type often determines the type of vulnerability-triggering statements, meaning that vulnerability type can be leveraged to identify vulnerability-triggering statements;
