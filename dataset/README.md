@@ -1,2 +1,2 @@
 1.  ` InterPVD.xlsx` is the list of vulnerabilities of C/C++ open-source software we built. It involves 769 CVE vulnerabilities, each of which is labeled with, among other things, its patch statements, its sink statements, its nature in terms of being inter-procedural or not, its type of inter-procedural vulnerability, and its sequence of functions starting from the vulnerable function to the sink function, etc.
-2.  `./DIFF_NEW_OLD`: This folder contains diff files, vulnerable files, and non-vulnerability files for 769 CVEs.
+2.  `./DIFF_NEW_OLD`: This folder contains diff files, vulnerable files, and non-vulnerability files for 769 CVE vulnerabilities.
