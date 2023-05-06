@@ -1,11 +1,11 @@
-# VulTrigger: A Tool for Studying Inter-Procedural Vulnerabilities #
+# On the (In)Effectiveness of Function-Level Vulnerability Detectors for Inter-Procedural Vulnerabilities #
 
-We propose a tool, dubbed VulTrigger, for identifying sink statements across functions and use this tool to conduct a systematic empirical study on inter-procedural vulnerabilities in C/C++ open-source software.  For this purpose, we build the first Inter-Procedural Vulnerability Dataset (InterPVD) for C/C++ open-source software. We find: 
-1. the vulnerability type often determines the type of sink statements, meaning that vulnerability type can be leveraged to identify sink statements;
-2. inter-procedural vulnerabilities are prevalent with 2.8 inter-procedural layers on average.
+We propose a tool, dubbed VulTrigger, for identifying sink statements across functions and investigate the (in)effectiveness of function-level vulnerability detectors in detecting inter-procedural vulnerabilitie.  For this purpose, we build the first Inter-Procedural Vulnerability Dataset (InterPVD) for C/C++ open-source software. We find: 
+1. inter-procedural vulnerabilities are prevalent with an average of 2.8 inter-procedural layers;;
+2. detecting inter-procedural vulnerabilities is significantly more challenging than detecting intra-procedural vulnerabilities for function-level vulnerability detectors.
 
 ##  Requirements ##
-1. python 2.x, 3.x
+1. python 2.x, 3.
 2. joern 0.3.1 (jdk 1.7)
 3. neo4j 2.1.5
 
