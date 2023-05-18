@@ -1,6 +1,6 @@
 # On the (In)Effectiveness of Function-Level Vulnerability Detectors for Inter-Procedural Vulnerabilities #
 
-We propose a tool, dubbed VulTrigger, for identifying vulnerability-triggering statements across functions and investigate the (in)effectiveness of function-level vulnerability detectors in detecting inter-procedural vulnerabilitie.  For this purpose, we build the first Inter-Procedural Vulnerability Dataset (InterPVD) for C/C++ open-source software. We find: 
+We propose a tool, dubbed VulTrigger, for identifying vulnerability-triggering statements across functions and investigate the (in)effectiveness of function-level vulnerability detectors in detecting inter-procedural vulnerabilities.  For this purpose, we build the first Inter-Procedural Vulnerability Dataset (InterPVD) for C/C++ open-source software. We find: 
 1. inter-procedural vulnerabilities are prevalent with an average of 2.8 inter-procedural layers;
 2. detecting inter-procedural vulnerabilities is significantly more challenging than detecting intra-procedural vulnerabilities for function-level vulnerability detectors.
 
