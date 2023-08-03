@@ -1,7 +1,7 @@
 This folder contains all the code and data needed for the VulTrigger implementation. The purpose of each file is explained below.
 VulTrigger has three steps. 
-1. Identifying Critical Variables. This step needs the `cv_extract.py` file.
-2. Generating Program Slices. This step needs the files `get_depen.py`, `get_cfg_relation.py`, `complete_PDG.py`, `access_db_operate.py`, `extract_df2.py`, `general_op2.py`, and `slice_op2.py`.
+1. Identifying critical variables. This step needs the `cv_extract.py` file.
+2. Generating program slices. This step needs the files `get_depen.py`, `get_cfg_relation.py`, `complete_PDG.py`, `access_db_operate.py`, `extract_df2.py`, `general_op2.py`, and `slice_op2.py`.
 3. Identifying Vulnerability-Triggering Statements. This step requires all the code in the `./match_sink` folder.
 
 Next, the functions in each file will be introduced.
