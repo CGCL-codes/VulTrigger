@@ -26,6 +26,7 @@
         "all_diff_path":"./data/C-Diffs/ffmpeg/",
         "all_new_path":"./data/C-Non_Vulnerable_Files/ffmpeg/",
         "all_old_path":"./data/C-Vulnerable_Files/ffmpeg/",
-        "all_dep_path":"./data/Dependency_Files/"
+        "all_dep_path":"./data/Dependency_Files/",
+        "all_match_path":"./match_results/"
     }
 }

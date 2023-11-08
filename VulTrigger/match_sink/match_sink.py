@@ -2,6 +2,7 @@ import sys
 # from markupsafe import re
 import re
 import ast
+import json
 from optparse import OptionParser
 from sink_CWE119 import sink_119
 from sink_CWE189 import sink_189
@@ -704,7 +705,14 @@ def append_cv(sink_cv, new_cv):
     sink_cv.append(new_cv.strip())
     return sink_cv
 
+def parse_sink_source_message(sink_source_line):
+    single_sink_source = {}
+    single_sink_source["code"] = sink_source_line.split(" location: ")[0]
+    single_sink_source["location"] = sink_source_line.split(" location: ")[-1].split(" cross_layer: ")[0]
+    single_sink_source["cross_layer"] = sink_source_line.split(" cross_layer: ")[-1].split(" file: ")[0]
+    single_sink_source["file"] = sink_source_line.split(" file: ")[-1]
 
+    return single_sink_source
 
 def main():
     slices = []
@@ -731,6 +739,25 @@ def main():
         print(i)
     # print(all_sinks)
     print('')
+
+    # write to .json file
+    all_sink_source_json = {}
+    sink_list = []
+    for i in all_sinks:
+        single_sink_source = parse_sink_source_message(i)
+        sink_list.append(single_sink_source)
+
+    all_sink_source_json["sinks"] = sink_list
+
+    f = open('../config.json')   
+    path_data = json.load(f)
+    match_path = path_data['all_test_code']['all_match_path']
+    match_result_file = os.path.join(match_path, command_soft, command_cve, 'sink_source_json.json')
+
+    with open(match_result_file, "w") as f:
+        print("write to json....")
+        json_str = json.dumps(all_sink_source_json, indent=4)
+        f.write(json_str)
 
 
 
