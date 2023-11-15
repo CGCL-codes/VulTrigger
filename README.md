@@ -4,13 +4,13 @@ We propose a tool, dubbed VulTrigger, for identifying vulnerability-triggering s
 1. inter-procedural vulnerabilities are prevalent with an average of 2.8 inter-procedural layers;
 2. detecting inter-procedural vulnerabilities is significantly more challenging than detecting intra-procedural vulnerabilities for function-level vulnerability detectors.
 
+***We provide the environments and test code of other vulnerability detection tools we evaluate, including three open-sourced tools (i.e., Flawfinder, Infer, and CodeQL) and five function-level vulnerability detectors (i.e., VulBERTa, LineVul, Devign, ReVeal, and VulCNN) in the form of docker images. We publish them on dockerhub and the link is available at `docker.txt`.***
+
 ##  Requirements ##
 To use VulTrigger, you need:
 1. python 2.x, 3.
 2. joern 0.3.1 (jdk 1.7)
 3. neo4j 2.1.5
-
-We also provide the environments and test codes of other vulnerability detection tools mentioned in the paper, including Flawfinder, Infer, CodeQL, VulBERTa, LineVul, Devign, ReVeal, and VulCNN. We provide them in the form of docker images and publish them on dockerhub. The links are available at `docker.txt`
 
 ## Step Instructions ##
 You can run it step-by-step for a better understanding of the VulTrigger tool, or use the script all_data.py to more efficiently get results from multiple CVEs.
