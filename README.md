@@ -5,7 +5,6 @@ We propose a tool, dubbed VulTrigger, for identifying vulnerability-triggering s
 2. detecting inter-procedural vulnerabilities is significantly more challenging than detecting intra-procedural vulnerabilities for function-level vulnerability detectors.
 
 
-
 ##  Requirements ##
 To use VulTrigger, you need:
 1. python 2.x, 3.
