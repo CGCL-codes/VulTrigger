@@ -4,7 +4,6 @@ We propose a tool, dubbed VulTrigger, for identifying vulnerability-triggering s
 1. inter-procedural vulnerabilities are prevalent with an average of 2.8 inter-procedural layers;
 2. detecting inter-procedural vulnerabilities is significantly more challenging than detecting intra-procedural vulnerabilities for function-level vulnerability detectors.
 
-
 ##  Requirements ##
 To use VulTrigger, you need:
 1. python 2.x, 3.
@@ -42,3 +41,7 @@ You can run it step-by-step for a better understanding of the VulTrigger tool, o
 4. Execute the file `match_sink.py [cwe] [software]`. 
 
 ***We provide the environments and test code of other vulnerability detection tools we evaluate, including three open-sourced tools (i.e., Flawfinder, Infer, and CodeQL) and five function-level vulnerability detectors (i.e., VulBERTa, LineVul, Devign, ReVeal, and VulCNN) in the form of docker images. We publish them on Docker Hub and the link is available at https://hub.docker.com/r/vultrigger/models_tools_env/tags.***
+## Support or Contact
+VulTrigger is developed at SCTS&CGCL Lab (http://grid.hust.edu.cn) by Zhen Li, Ning Wang, Deqing Zou, Yating Li, Ruqian Zhang, Shouhuai Xu, Chao Zhang, and Hai Jin. For any questions, please contact Zhen Li (zh_li@hust.edu.cn) , Ning Wang (wangn@hust.edu.cn) , Deqing Zou (deqingzou@hust.edu.cn) , Yating Li (liyating20210228@163.com) , Ruqian Zhang (ruqianzhang@hust.edu.cn) , Shouhuai Xu (sxu@uccs.edu) , Chao Zhang (chaoz@tsinghua.edu.cn) and Hai Jin (hjin@hust.edu.cn).
+
+Copyright (C) 2023, [STCS & CGCL](http://grid.hust.edu.cn/) and [Huazhong University of Science and Technology](http://www.hust.edu.cn/).
